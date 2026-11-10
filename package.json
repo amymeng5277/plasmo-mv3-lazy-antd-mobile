@@ -28,9 +28,18 @@
   "manifest": {
     "web_accessible_resources": [
       {
-        "resources": ["resources/demo.json"],
-        "matches": ["https://example.com/*"]
+        "resources": [
+          "resources/demo.json"
+        ],
+        "matches": [
+          "https://example.com/*"
+        ]
       }
     ]
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@parcel/runtime-js@2.8.3": "patches/@parcel__runtime-js@2.8.3.patch"
+    }
   }
 }

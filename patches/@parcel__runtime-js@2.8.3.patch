@@ -1,0 +1,21 @@
+diff --git a/lib/helpers/browser/js-loader.js b/lib/helpers/browser/js-loader.js
+index 7ccfd2448bdbd4e9c081a1be4fb2b093fd48bc18..7c4dc9a92271eefcb076ccb271421d57d0bdee6f 100644
+--- a/lib/helpers/browser/js-loader.js
++++ b/lib/helpers/browser/js-loader.js
+@@ -3,6 +3,16 @@
+ var cacheLoader = require('../cacheLoader');
+ 
+ module.exports = cacheLoader(function (bundle) {
++  // Load extension JS chunks in the Content Script's ISOLATED world.
++  if (
++    typeof chrome !== "undefined" &&
++    chrome.runtime?.id &&
++    location.protocol !== "chrome-extension:" &&
++    bundle.startsWith(chrome.runtime.getURL(""))
++  ) {
++    return import(bundle).then(() => undefined);
++  }
++
+   return new Promise(function (resolve, reject) {
+     // Don't insert the same script twice (e.g. if it was already in the HTML)
+     var existingScripts = document.getElementsByTagName('script');
