@@ -1,0 +1,16 @@
+/* Separate Tailwind build only for the lazy content-script UI. */
+@config "../tailwind.panel.config.js";
+@tailwind components;
+@tailwind utilities;
+
+:host {
+  --adm-color-primary: #1677ff;
+  color-scheme: light;
+}
+
+#plasmo-lazy-panel {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
