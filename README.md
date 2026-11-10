@@ -1,3 +1,10 @@
+
+重点:
+1. `__parcel__import__()` 修复了 Content Script 的 JS Chunk Loader, 从而可以动态加载代码. 而不是 big bundle
+
+---
+
+
 # Plasmo + Ant Design Mobile + Tailwind CSS + MV3 lazy import()
 
 This is a self-contained rewrite of the Plasmo example pattern. The initial Content Script is deliberately written in `content.ts` and avoids importing React, Ant Design Mobile or Tailwind CSS. The feature code is loaded by a statically-analyzable `import("./ui/mount")` when the user clicks the small floating launcher. A second `React.lazy()` boundary only loads the editor when requested.

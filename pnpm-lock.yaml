@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   '@parcel/runtime-js@2.8.3':
-    hash: pb74u2t2nmibbexqglqigeorii
+    hash: 4cmwvtqm7fr5a4vov64a5yqfoe
     path: patches/@parcel__runtime-js@2.8.3.patch
 
 dependencies:
@@ -1620,7 +1620,7 @@ packages:
       - '@parcel/core'
     dev: false
 
-  /@parcel/runtime-js@2.8.3(patch_hash=pb74u2t2nmibbexqglqigeorii)(@parcel/core@2.9.3):
+  /@parcel/runtime-js@2.8.3(patch_hash=4cmwvtqm7fr5a4vov64a5yqfoe)(@parcel/core@2.9.3):
     resolution: {integrity: sha512-IRja0vNKwvMtPgIqkBQh0QtRn0XcxNC8HU1jrgWGRckzu10qJWO+5ULgtOeR4pv9krffmMPqywGXw6l/gvJKYQ==}
     engines: {node: '>= 12.0.0', parcel: ^2.8.3}
     dependencies:
@@ -2307,7 +2307,7 @@ packages:
       '@parcel/optimizer-data-url': 2.9.3(@parcel/core@2.9.3)
       '@parcel/reporter-bundle-buddy': 2.9.3(@parcel/core@2.9.3)
       '@parcel/resolver-default': 2.9.3(@parcel/core@2.9.3)
-      '@parcel/runtime-js': 2.8.3(patch_hash=pb74u2t2nmibbexqglqigeorii)(@parcel/core@2.9.3)
+      '@parcel/runtime-js': 2.8.3(patch_hash=4cmwvtqm7fr5a4vov64a5yqfoe)(@parcel/core@2.9.3)
       '@parcel/runtime-service-worker': 2.9.3(@parcel/core@2.9.3)
       '@parcel/source-map': 2.1.1
       '@parcel/transformer-babel': 2.9.3(@parcel/core@2.9.3)

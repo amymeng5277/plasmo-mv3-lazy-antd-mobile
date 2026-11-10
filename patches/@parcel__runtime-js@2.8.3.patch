@@ -1,5 +1,5 @@
 diff --git a/lib/helpers/browser/js-loader.js b/lib/helpers/browser/js-loader.js
-index 7ccfd2448bdbd4e9c081a1be4fb2b093fd48bc18..7c4dc9a92271eefcb076ccb271421d57d0bdee6f 100644
+index 7ccfd2448bdbd4e9c081a1be4fb2b093fd48bc18..6afa550ac6445f83830ab9d8a1a2061b9c3080e2 100644
 --- a/lib/helpers/browser/js-loader.js
 +++ b/lib/helpers/browser/js-loader.js
 @@ -3,6 +3,16 @@
@@ -13,7 +13,7 @@ index 7ccfd2448bdbd4e9c081a1be4fb2b093fd48bc18..7c4dc9a92271eefcb076ccb271421d57
 +    location.protocol !== "chrome-extension:" &&
 +    bundle.startsWith(chrome.runtime.getURL(""))
 +  ) {
-+    return import(bundle).then(() => undefined);
++    return __parcel__import__(bundle).then(() => undefined);
 +  }
 +
    return new Promise(function (resolve, reject) {
